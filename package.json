@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "templ generate components/ && go build -o app main.go",
-    "dev": "concurrently \"npm:templ\" \"npm:watch\"",
+    "build": "npx @tailwindcss/cli -i ./static/css/input.css -o ./static/css/output.css && templ generate components/ && go build -o app main.go",
+    "dev": "concurrently \"npm:templ\" \"npm:watch\" \"npm:css\"",
+    "css": "npx @tailwindcss/cli -i ./static/css/input.css -o ./static/css/output.css",
     "templ": "templ generate --watch components/",
     "watch": "nodemon"
   },
