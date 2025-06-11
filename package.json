@@ -1,0 +1,24 @@
+{
+  "name": "goth-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "templ generate components/ && go build -o app main.go",
+    "dev": "concurrently \"npm:templ\" \"npm:watch\"",
+    "templ": "templ generate --watch components/",
+    "watch": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.9",
+    "daisyui": "^5.0.43",
+    "tailwindcss": "^4.1.9"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.10"
+  }
+}
