@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	port := ":3000"
 	http.Handle("/", templ.Handler(components.Index("hello, world!")))
 

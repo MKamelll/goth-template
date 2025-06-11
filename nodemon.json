@@ -1,7 +1,7 @@
 {
-    "watch": ["*.go", "**/*.go", "*.templ", "**/*.templ", "**/*.css"],
-    "ignore": ["node_modules", "assets", "dist", "public", "**/*_templ.go"],
-    "ext": "go,templ",
+    "watch": ["*.go", "**/*.go"],
+    "ignore": ["node_modules", "assets", "dist", "public"],
+    "ext": "go,js",
     "exec": "go run main.go",
     "signal": "SIGTERM"
 }
