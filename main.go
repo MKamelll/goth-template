@@ -5,13 +5,13 @@ import (
 	"net/http"
 
 	"github.com/a-h/templ"
-	"github.com/mkamelll/goth-template/components"
+	views "github.com/mkamelll/goth-template/resources/views"
 )
 
 func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	port := ":3000"
-	http.Handle("/", templ.Handler(components.Index("hello, world!")))
+	http.Handle("/", templ.Handler(views.Index("hello, world!")))
 
 	fmt.Println("You're app is running on: http://localhost" + port)
 	http.ListenAndServe(port, nil)
