@@ -22,17 +22,12 @@ npm install
 npm run dev
 ```
 
-To create a migration
+To run goose
 ```console
-npm run goose:create <Your migration name>
-```
-
-To migrate
-```console
-npm run goose:migrate
+npm run goose <Your Command>
 ```
 
 To generate the go code from your sql files
 ```console
-npm run sqlc:generate
+npm run sqlc generate
 ```
