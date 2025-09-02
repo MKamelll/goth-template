@@ -8,7 +8,10 @@
     "watch": "nodemon",
     "templ": "templ generate --watch resources/",
     "css": "npx @tailwindcss/cli -i ./static/css/input.css -o ./static/css/output.css --watch",
-    "postinstall": "cp node_modules/htmx.org/dist/htmx.min.js static/js/"
+    "postinstall": "cp node_modules/htmx.org/dist/htmx.min.js static/js/",
+    "goose:create": "sh -c 'goose -env=.gooseenv create -s \"$1\" sql' --",
+    "goose:migrate": "goose -env=.gooseenv migrate",
+    "sqlc:generate": "sqlc generate"
   },
   "keywords": [],
   "author": "",

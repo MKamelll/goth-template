@@ -1,0 +1,4 @@
+GOOSE_DRIVER=sqlite
+GOOSE_DBSTRING=./local.db
+GOOSE_MIGRATION_DIR=./migrations
+GOOSE_TABLE=goose_migrations
